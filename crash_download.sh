@@ -1,8 +1,10 @@
 #!/bin/sh
 
-# a shell script used to download NYPD Motor Vehicle Collisions Data: https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95
+# a shell script used to download NYPD Motor Vehicle Collisions Data: 
+# https://data.cityofnewyork.us/Public-Safety/NYPD-Motor-Vehicle-Collisions/h9gi-nx95
 # forked from http://alvinalexander.com/linux-unix/wget-command-shell-script-example-download-url
-# this should be executed from a crontab entry for keeping data uptodate or use URL link below to obtain current data shapshot
+# this should be executed from a crontab entry for keeping data uptodate 
+# or use URL link below to obtain current data shapshot
 
 
 # full path for correct cron job
