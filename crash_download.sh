@@ -22,5 +22,5 @@ URL=https://data.cityofnewyork.us/api/views/h9gi-nx95/rows.csv?accessType=DOWNLO
 
 cd $DIR
 wget $URL -O $FILE -o $LOGFILE 
-python /home/yanyuchka/repos/Charts-for-CompStat/crash_cleaner.py
+python '/home/yanyuchka/repos/Charts-for-CompStat/crash_cleaner.py'
 
