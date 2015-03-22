@@ -7,6 +7,5 @@
 
 # ipython checkpoints
 *-checkpoint.ipynb
+.ipynb_checkpoints
 *.tmp.ipynb
-.*
-
