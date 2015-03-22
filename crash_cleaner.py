@@ -89,7 +89,6 @@ def read_crash_csv(data):
 def sample_crash_data(n,path,folders):
   df = read_crash_csv(os.path.join(path,folders[0],'crashdata.csv'))
   logging.basicConfig(filename=os.path.join(path,folders[1],'sample.log'),level=logging.DEBUG)
-  logging.info('For Raw data set contains %s records ...' % (df.shape[0]))
   start = pd.to_datetime(dt.datetime.today())
   logging.info('As for %s raw data set contains %s records ...' % (dt.datetime.strftime(start,"%m/%d/%Y %H:%M:%S")
 ,df.shape[0]))
