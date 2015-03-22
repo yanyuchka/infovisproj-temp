@@ -8,5 +8,5 @@
 # ipython checkpoints
 *-checkpoint.ipynb
 *.tmp.ipynb
-.ipynb_checkpoints
+.*
 
