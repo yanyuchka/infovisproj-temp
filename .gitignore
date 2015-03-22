@@ -1,6 +1,9 @@
-#raw data
+# raw data
 *crashdata.csv
 *wget.log
-
 # vim temp
 *~
+# ipython checkpoints
+*-checkpoint.ipynb
+.ipynb_checkpoints
+*.tmp.ipynb
