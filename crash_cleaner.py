@@ -94,7 +94,7 @@ def sample_crash_data(n,path,folders):
 ,df.shape[0]))
   end = pd.to_datetime(dt.datetime.today()-dt.timedelta(days=n),unit='s')
   df_new = df[(df.DATE >= end) & (df.DATE <= start)]
-  df_new.to_csv(os.path.join(path,folders[1],'%sdays_crashdata.csv' %(n)))
+  df_new.to_csv(os.path.join(path,folders[1],'%sdays_crashdata.csv' %(n)), index=False)
   logging.info('Raw data set for the last %s days contains %s records' % (n, df_new.shape[0]))
 
 
