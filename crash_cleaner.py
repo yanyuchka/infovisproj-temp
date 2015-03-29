@@ -82,6 +82,7 @@ def read_crash_csv(data):
   df['TIME'] = pd.to_datetime(map(time_parser, df['TIME']))  
   df['LOCATION'] = zip(df.LATITUDE,df.LONGITUDE)
   df['ZIP CODE'] = map(zip_cleaner,df['ZIP CODE'])
+  df.columns = [field.replace(" ","_") for field in df.columns]
   return(df)
 
 #subset last n days of crash data and log number of records in data sets
