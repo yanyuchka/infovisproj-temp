@@ -21,6 +21,5 @@ LOGFILE=wget.log
 URL=https://data.cityofnewyork.us/api/views/h9gi-nx95/rows.csv?accessType=DOWNLOAD
 
 cd $DIR
-wget $URL -O $FILE -o $LOGFILE 
-python '/home/yanyuchka/repos/Charts-for-CompStat/crash_cleaner.py'
+wget $URL -O $FILE -o $LOGFILE
 
