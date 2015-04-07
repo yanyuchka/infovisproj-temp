@@ -78,8 +78,8 @@ def read_crash_csv(data):
      'VEHICLE TYPE CODE 3' : str,
      'VEHICLE TYPE CODE 4' : str,
      'VEHICLE TYPE CODE 5' : str})
-  df['DATE'] = pd.to_datetime(map(date_parser, df['DATE']))  
-  df['TIME'] = pd.to_datetime(map(time_parser, df['TIME']))  
+  df['DATE'] = map(date_parser, df['DATE'])  
+  df['TIME'] = map(time_parser, df['TIME'])  
   df['LOCATION'] = zip(df.LATITUDE,df.LONGITUDE)
   df['ZIP CODE'] = map(zip_cleaner,df['ZIP CODE'])
   df.columns = [field.replace(" ","_") for field in df.columns]
@@ -90,10 +90,10 @@ def read_crash_csv(data):
 def sample_crash_data(n,path,folders):
   df = read_crash_csv(os.path.join(path,folders[0],'crashdata.csv'))
   logging.basicConfig(filename=os.path.join(path,folders[1],'sample.log'),level=logging.DEBUG)
-  start = pd.to_datetime(dt.datetime.today())
+  start = dt.date.today()
   logging.info('As for %s raw data set contains %s records ...' % (dt.datetime.strftime(start,"%m/%d/%Y %H:%M:%S")
 ,df.shape[0]))
-  end = pd.to_datetime(dt.datetime.today()-dt.timedelta(days=n),unit='s')
+  end = dt.date.today()-dt.timedelta(days=n)
   df_new = df[(df.DATE >= end) & (df.DATE <= start)]
   df_new.to_csv(os.path.join(path,folders[1],'%sdays_crashdata.csv' %(n)), index=False)
   logging.info('Raw data set for the last %s days contains %s records' % (n, df_new.shape[0]))
